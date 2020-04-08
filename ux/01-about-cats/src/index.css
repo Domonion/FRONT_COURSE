@@ -1,0 +1,181 @@
+.cat-picture {
+  width: 350px;
+  height: 250px;
+
+  opacity: 0.9;
+}
+
+.cat-picture:hover {
+  opacity: 1;
+}
+
+body {
+  position: relative;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.name {
+  overflow: hidden;
+
+  width: fit-content;
+  max-width: 350px;
+
+  font-size: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name:hover {
+  color: #700;
+}
+
+.previous-price {
+  color: rgba(128, 128, 128, 0.7);
+  text-decoration: line-through;
+}
+
+.category {
+  font-size: 15px;
+}
+
+.category:before {
+  content: 'Категория: ';
+  opacity: 0.5;
+}
+
+.category span:hover {
+  color: #f08080;
+  opacity: 0.8;
+}
+
+.cat-article {
+  margin: 1rem;
+
+  border: 1px solid;
+
+  vertical-align: top;
+}
+
+.cat-article:hover {
+  background-color: rgba(139, 69, 19, 0.1);
+}
+
+.picture,
+.information,
+.small-description,
+.description {
+  padding: 10px;
+}
+
+.description,
+.small-description {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list:not(:checked) ~ .cat-article {
+  display: inline-block;
+}
+
+.list:checked ~ .cat-article {
+  display: block;
+
+  width: fit-content;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.list:checked ~ .cat-article .information {
+  position: center;
+
+  width: 350px;
+}
+
+.cat-article .description {
+  width: 350px;
+}
+
+.list:not(:checked) ~ .cat-article .description {
+  display: none;
+}
+
+.list:checked ~ .cat-article .small-description {
+  display: none;
+}
+
+.description:before {
+  content: 'Полное описание:';
+}
+
+.small-description:before {
+  content: 'Краткое описание:';
+}
+
+.description-text,
+.small-description-text {
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.header {
+  position: fixed;
+
+  top: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  border-bottom: #808080 solid 1px;
+}
+
+.title {
+  margin: 0;
+
+  background-color: #fff;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+.title:first-letter {
+  color: #f00;
+}
+
+.footer-website-link {
+  text-align: right;
+}
+
+.mail-image {
+  width: 20px;
+
+  vertical-align: middle;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  border-top: #808080 solid 1px;
+
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+.contact-info {
+  width: 100%;
+  padding: 0.75rem;
+}
+
+.contact-info a {
+  color: #4c4cd8;
+  text-decoration: none;
+  vertical-align: middle;
+}

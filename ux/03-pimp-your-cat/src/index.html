@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>03-pimp-your-cat</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="form_container">
+      <div class="img_container">
+        <img src="itmo.png" alt="ИтМоХа" class="form_picture">
+      </div>
+      <div class="input_container">
+        <div class="text">
+          Отчислись в один клик!
+        </div>
+        <div class="name-input">
+          <label for="name">Ф.И.О:</label>
+          <input type="text" id="name" placeholder="Кононов Артемий Владимирович">
+        </div>
+        <div class="group-selector">
+          <label for="group-select">Группа: </label>
+          <select id="group-select">
+            <option selected>Не выбрано</option>
+            <option>М3339</option>
+            <option>М3337</option>
+            <option>М3336</option>
+            <option>М3335</option>
+          </select>
+        </div>
+        <div class="gender-selector">
+          <div class="gender-text">Пол:</div>
+          <div class="gender-variants">
+            <label for="id1" class="gender male input-radio-container">
+              <input id="id1" type="radio" name="gender-input" checked>
+              <span class="checkmark"></span>
+              <div class="gender-inner-text">Мужчина</div>
+            </label>
+            <label for="id2" class="gender female input-radio-container">
+              <input id="id2" type="radio" name="gender-input">
+              <span class="checkmark"></span>
+              <div class="gender-inner-text">Женщина</div>
+            </label>
+          </div>
+        </div>
+        <div class="mother-selector">
+          <label for="id3" class="input-checkbox-container">Уведомить родителей?
+            <input id="id3" type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="submit">
+          <input type="submit" value="Отчислиться!">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

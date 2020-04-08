@@ -1,0 +1,40 @@
+.container {
+  background-color: red;
+  width: 400px;
+  height: 400px;
+  display: grid;
+}
+
+.element {
+  margin: auto;
+  cursor: help;
+  position: relative;
+  font-size: 48px;
+}
+
+.element .tooltip {
+  display: none;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  width: 150px;
+  top: 0;
+  right: 105%;
+}
+
+.element .tooltip::after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  display: block;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid white;
+  right: -3px;
+  top: 0.5em;
+}
+
+.element:hover .tooltip {
+  display: block;
+}

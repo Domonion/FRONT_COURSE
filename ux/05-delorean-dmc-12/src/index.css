@@ -1,0 +1,157 @@
+@font-face {
+  font-family: OldRussian;
+  src: local('MonomakhUnicode'), url('MonomakhUnicode.woff') format('woff'),
+    url('MonomakhUnicode.ttf') format('truetype'),
+    url('MonomakhUnicode.eot?#iefix') format('embedded-opentype');
+}
+
+html {
+  min-width: 1300px;
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  background-color: darkkhaki;
+}
+
+.title,
+.subtitle {
+  font-family: Arial Black, serif;
+  font-size: 4em;
+  font-weight: 500;
+  line-height: 0.7em;
+  text-align: center;
+  text-shadow: 1px 1px #492400, -1px -1px #38003a;
+}
+
+.subtitle {
+  font-size: 2em;
+}
+
+.content {
+  margin-right: 30px;
+  margin-left: 30px;
+
+  column-count: 3;
+  column-rule: 2px solid #000;
+  font-family: Times New Roman, serif;
+  line-height: 22px;
+}
+
+.column-split {
+  column-count: 2;
+  column-rule: 2px dotted #000;
+}
+
+.main-text {
+  color: #260400;
+  font-size: 15px;
+  hyphens: manual;
+  text-align: justify;
+  text-indent: 12px;
+}
+
+.main-text:first-of-type:first-letter {
+  margin-right: 6px;
+
+  font-size: 150%;
+  font-weight: 600;
+}
+
+.quote {
+  font-family: Book Antiqua, serif;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.article-image-caption {
+  font-family: Calibri, serif;
+  opacity: 0.7;
+}
+
+.printing-info {
+  position: absolute;
+  top: 600px;
+  left: -5px;
+
+  width: 1ch;
+
+  font-family: Cousin, serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  word-break: break-all;
+}
+
+.printing-info > .printing-info-part {
+  margin: 12px;
+
+  line-height: 12px;
+}
+
+.article-image {
+  width: 350px;
+}
+
+/*Old font*/
+
+.old-font:checked ~ .main .main-text {
+  font-family: OldRussian, serif;
+}
+
+.old-font:checked ~ .main .title,
+.old-font:checked ~ .main .subtitle {
+  font-family: Lobster, serif;
+}
+
+.old-font:checked ~ .main .quote {
+  font-family: Bad Script, serif;
+  font-style: normal;
+}
+
+.old-font:checked ~ .main .article-image-caption {
+  font-family: Comfortaa, serif;
+}
+
+/* Night mode */
+
+.night-mode:checked ~ .main {
+  background-color: black;
+  opacity: 0.8;
+}
+
+.night-mode:checked ~ .mode-label {
+  color: wheat;
+}
+
+.night-mode:checked ~ .main .title,
+.night-mode:checked ~ .main .subtitle,
+.night-mode:checked ~ .main .main-text,
+.night-mode:checked ~ .main .quote,
+.night-mode:checked ~ .main .article-image-caption,
+.night-mode:checked ~ .main .printing-info {
+  color: wheat;
+}
+
+/* Big letters*/
+
+.big-letters:checked ~ .main .main-text,
+.big-letters:checked ~ .main .quote {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.big-letters:checked ~ .main .title {
+  font-size: 6em;
+}
+
+.big-letters:checked ~ .main .subtitle {
+  font-size: 3em;
+}

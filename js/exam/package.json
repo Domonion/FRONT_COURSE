@@ -1,0 +1,50 @@
+{
+  "name": "js-exam-practice",
+  "version": "1.0.0",
+  "description": "Экзаменационная задача",
+  "private": true,
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "build:watch": "tsc --project tsconfig.build.json --watch",
+    "start": "node build/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint \"**/*.ts\"",
+    "lint-fix": "eslint --fix \"**/*.ts\"",
+    "format": "prettier --write \"**/*.{ts,json,md}\""
+  },
+  "devDependencies": {
+    "@types/jest": "24.9.0",
+    "@types/node": "12.12.25",
+    "@yandex-lms-ext/eslint-config-base": "2.1.0",
+    "@yandex-lms-ext/prettier-config": "1.0.2",
+    "eslint": "6.8.0",
+    "husky": "4.0.10",
+    "jest": "24.9.0",
+    "lint-staged": "10.0.1",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.19.1",
+    "ts-jest": "24.3.0",
+    "typescript": "3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm-run-all lint test",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

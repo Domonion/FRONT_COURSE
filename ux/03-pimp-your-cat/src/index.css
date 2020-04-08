@@ -1,0 +1,275 @@
+.form_container {
+  display: grid;
+  grid-template-rows: 45% 55%;
+
+  box-sizing: border-box;
+  width: 500px;
+  height: 800px;
+  padding: 10px;
+
+  border: 10px solid rgba(25, 70, 186, 1);
+  border-radius: 20px;
+
+  font-family: 'Patrick Hand', cursive;
+}
+
+.text,
+.gender-selector,
+.group-selector,
+.mother-selector,
+.submit,
+.name-input {
+  margin: 3px;
+}
+
+.mother-selector label {
+  font-size: 35px;
+}
+
+.text {
+  width: 100%;
+
+  font-size: 39px;
+}
+
+.input_container {
+  display: grid;
+  grid-template-rows: 20% 16% 16% 16% 16% 16%;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  border: 5px solid rgba(25, 70, 186, 1);
+  border-radius: 20px;
+
+  background-color: rgba(25, 70, 186, 1);
+  color: white;
+  text-align: justify;
+}
+
+/*genders*/
+.gender-selector {
+  display: grid;
+  grid-template-areas: 'text variants';
+  grid-template-columns: 30% 70%;
+}
+
+.gender-text {
+  grid-area: text;
+
+  font-size: 40px;
+}
+
+.gender-variants {
+  display: grid;
+  grid-area: variants;
+  grid-template-areas: 'male female';
+  grid-template-columns: 50% 50%;
+}
+
+.male {
+  grid-area: male;
+}
+
+.female {
+  grid-area: female;
+}
+
+/*image*/
+.form_picture {
+  position: relative;
+  top: -20px;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 120%;
+}
+
+.mother-selector {
+  display: grid;
+}
+
+.group-selector label {
+  font-size: 35px;
+}
+
+/*checkboxes*/
+.input-radio-container,
+.input-checkbox-container {
+  position: relative;
+
+  display: block;
+
+  user-select: none;
+}
+
+.checkmark {
+  position: absolute;
+
+  width: 38px;
+  height: 38px;
+
+  background-color: #eee;
+}
+
+.input-checkbox-container input,
+.input-radio-container input {
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  opacity: 0;
+}
+
+.input-checkbox-container .checkmark {
+  top: 3px;
+  right: 13px;
+
+  border-radius: 5px;
+}
+
+.input-radio-container .checkmark {
+  bottom: 10px;
+  left: 10px;
+
+  border-radius: 1000px;
+}
+
+.input-radio-container:hover input ~ .checkmark,
+.input-checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.input-radio-container input:checked ~ .checkmark,
+.input-checkbox-container input:checked ~ .checkmark {
+  box-sizing: border-box;
+
+  border: solid white 2px;
+
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  position: absolute;
+
+  display: none;
+
+  content: '';
+}
+
+.input-radio-container .checkmark:after {
+  top: 7px;
+  left: 7px;
+
+  width: 0;
+  height: 0;
+
+  border: solid white 10px;
+  border-radius: 100px;
+
+  transform: rotate(45deg);
+}
+
+.input-checkbox-container .checkmark:after {
+  top: 0;
+  left: 8px;
+
+  width: 15px;
+  height: 24px;
+
+  border: solid white;
+  border-width: 0 3px 3px 0;
+
+  transform: rotate(45deg);
+}
+
+.input-radio-container input:checked ~ .checkmark:after,
+.input-checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/*group-selector*/
+.group-selector select {
+  border: 1px solid white;
+  border-radius: 10px;
+
+  background-color: #eeeeee;
+  color: #2196f3;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 30px;
+  /*width: 100%;*/
+}
+
+.group-selector select option {
+  text-align: center;
+}
+
+.name-input {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.group-selector {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+/*name*/
+
+.name-input label {
+  font-size: 40px;
+}
+
+.gender-inner-text {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+
+  font-size: 23px;
+  vertical-align: middle;
+}
+
+.name-input input {
+  padding-left: 5px;
+
+  border: 1px solid white;
+  border-radius: 10px;
+
+  background-color: #eeeeee;
+  color: #2196f3;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 30px;
+}
+
+.name-input input::placeholder {
+  font-family: 'Patrick Hand', cursive;
+  opacity: 0.4;
+}
+
+.submit input {
+  width: 100%;
+  height: 100%;
+
+  border: white solid 1px;
+  border-radius: 10px;
+
+  background-color: #2196f3;
+  box-shadow: 0 2px #999;
+  color: white;
+  cursor: pointer;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 40px;
+  opacity: 0.9;
+}
+
+.submit input:hover {
+  opacity: 1;
+}
+
+.submit input:active {
+  transform: translateY(1px);
+
+  box-shadow: 0 1px #999;
+}
